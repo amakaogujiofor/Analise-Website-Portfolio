@@ -124,6 +124,7 @@ nav {
 }
 
 /* Media Queries */
+/* Responsive Large Screens */
 @media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
@@ -132,7 +133,18 @@ nav {
     --fs-body: 1.125rem;
   }
 }
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .service {
+    margin-right: 1em;
+  }
+}
 
+/* Responsive Medium Screens */
 @media (min-width: 600px) {
   .intro {
     display: grid;
@@ -163,3 +175,62 @@ nav {
     width: calc(100% + 1.5em);
   }
 }
+
+/* Services Section */
+
+.my-services {
+  background: var(--clr-dark);
+  background-image: url(../Analise-Website/images/lady-computer.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--clr-light);
+  text-align: center;
+}
+.services {
+  margin-bottom: 2em;
+}
+
+.section__title--services {
+  color: var(--clr-accent);
+  position: relative;
+}
+.section__title--services::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+.btn {
+  background: var(--clr-accent);
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  color: var(--clr-dark);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.service {
+  padding: 1em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* About Me Section Styling */
