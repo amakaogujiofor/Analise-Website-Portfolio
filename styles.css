@@ -3,6 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Custom Properties */
 
@@ -176,6 +179,9 @@ header {
 .nav-open .nav {
   visibility: unset;
   transform: translateX(0);
+}
+.nav-open .nav-toggle {
+  position: fixed;
 }
 
 /* Hamburger Menu */
